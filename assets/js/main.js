@@ -253,12 +253,7 @@
                         $image.trigger('click');
                     });
 
-            // EXIF data					
-            EXIF.getData($image_img[0], function () {
-                exifDatas[$image_img.data('name')] = getExifDataMarkup(this);
-            });
-
-        });
+    
 
         // Poptrox.
         $main.poptrox({
