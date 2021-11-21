@@ -3,7 +3,6 @@
  html5up.net | @ajlkn
  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 
- Added EXIF data and enhanced for Jekyll by Ram Patra
  */
 
  (function ($) {
@@ -257,7 +256,7 @@
             baseZIndex: 20000,
             caption: function ($a) {
                 var $image_img = $a.children('img');
-                var data = exifDatas[$image_img.data('name')];
+               
                 if (data === undefined) {
                     // EXIF data					
                     EXIF.getData($image_img[0], function () {
