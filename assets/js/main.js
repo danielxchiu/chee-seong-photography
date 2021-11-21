@@ -214,10 +214,7 @@
 
         });
 
-        // Main.
-        var $main = $('#main'),
-            exifDatas = {};
-
+        
         // Thumbs.
         $main.children('.thumb').each(function () {
 
