@@ -253,15 +253,24 @@
                         $image.trigger('click');
                     });
 
-           
+            // EXIF data					
+            EXIF.getData($image_img[0], function () {
+                exifDatas[$image_img.data('name')] = getExifDataMarkup(this);
+            });
+
+        });
 
         // Poptrox.
         $main.poptrox({
             baseZIndex: 20000,
             caption: function ($a) {
                 var $image_img = $a.children('img');
+                var data = exifDatas[$image_img.data('name')];
                 if (data === undefined) {
-                   
+                    // EXIF data					
+                    EXIF.getData($image_img[0], function () {
+                        data = exifDatas[$image_img.data('name')] = getExifDataMarkup(this);
+                    });
                 }
                 return data !== undefined ? '<p>' + data + '</p>' : ' ';
             },
@@ -297,7 +306,26 @@
                 $main[0]._poptrox.windowMargin = 0;
             });
 
-        
+        function getExifDataMarkup(img) {
+            var exif = fetchExifData(img);
+            var template = '';
+            for (var info in exif) {
+                if (info === "model") {
+                    template += '<i class="fa fa-camera-retro" aria-hidden="true"></i> ' + exif["model"] + '&nbsp;&nbsp;';
+                }
+                if (info === "aperture") {
+                    template += '<i class="fa fa-dot-circle-o" aria-hidden="true"></i> f/' + exif["aperture"] + '&nbsp;&nbsp;';
+                }
+                if (info === "shutter_speed") {
+                    template += '<i class="fa fa-clock-o" aria-hidden="true"></i> ' + exif["shutter_speed"] + '&nbsp;&nbsp;';
+                }
+                if (info === "iso") {
+                    template += '<i class="fa fa-info-circle" aria-hidden="true"></i> ' + exif["iso"] + '&nbsp;&nbsp;';
+                }
+            }
+            return template;
+        }
 
         
+
 })(jQuery);
