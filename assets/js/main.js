@@ -306,7 +306,25 @@
                 $main[0]._poptrox.windowMargin = 0;
             });
 
-        
+        function getExifDataMarkup(img) {
+            var exif = fetchExifData(img);
+            var template = '';
+            for (var info in exif) {
+                if (info === "model") {
+                    template += '<i class="fa fa-camera-retro" aria-hidden="true"></i> ' + exif["model"] + '&nbsp;&nbsp;';
+                }
+                if (info === "aperture") {
+                    template += '<i class="fa fa-dot-circle-o" aria-hidden="true"></i> f/' + exif["aperture"] + '&nbsp;&nbsp;';
+                }
+                if (info === "shutter_speed") {
+                    template += '<i class="fa fa-clock-o" aria-hidden="true"></i> ' + exif["shutter_speed"] + '&nbsp;&nbsp;';
+                }
+                if (info === "iso") {
+                    template += '<i class="fa fa-info-circle" aria-hidden="true"></i> ' + exif["iso"] + '&nbsp;&nbsp;';
+                }
+            }
+            return template;
+        }
 
         function fetchExifData(img) {
             var exifData = {};
