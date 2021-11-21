@@ -258,9 +258,7 @@
                 var $image_img = $a.children('img');
                
                 if (data === undefined) {
-                    // EXIF data					
-                    EXIF.getData($image_img[0], function () {
-                        data = exifDatas[$image_img.data('name')] = getExifDataMarkup(this);
+                    
                     });
                 }
                 return data !== undefined ? '<p>' + data + '</p>' : ' ';
