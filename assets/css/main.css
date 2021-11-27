@@ -169,7 +169,7 @@
 	body, input, select, textarea {
 		color: #a0a0a1;
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
-		font-size: 1.5rem;
+		font-size: 1.5em;
 		font-weight: 300;
 		letter-spacing: 0.025em;
 		line-height: 1.65;
@@ -178,7 +178,7 @@
 		@media screen and (max-width: 1680px) {
 
 			body, input, select, textarea {
-				font-size: 1.5rem;
+				font-size: 1.5em;
 			}
 
 		}
@@ -230,57 +230,57 @@
 	}
 
 	h2 {
-		font-size: 1.25em;
+		font-size: 2em;
 	}
 
 	h3 {
-		font-size: 1.1em;
+		font-size: 2em;
 	}
 
 	h4 {
-		font-size: 1em;
+		font-size: 2em;
 	}
 
 	h5 {
-		font-size: 0.9em;
+		font-size: 2em;
 	}
 
 	h6 {
-		font-size: 0.7em;
+		font-size: 2em;
 	}
 
 	@media screen and (max-width: 736px) {
 
 		h2 {
-			font-size: 1em;
+			font-size: 2em;
 		}
 
 		h3 {
-			font-size: 0.9em;
+			font-size: 2em;
 		}
 
 		h4 {
-			font-size: 0.8em;
+			font-size: 2em;
 		}
 
 		h5 {
-			font-size: 0.7em;
+			font-size: 2em;
 		}
 
 		h6 {
-			font-size: 0.7em;
+			font-size: 2em;
 		}
 
 	}
 
 	sub {
-		font-size: 0.8em;
+		font-size: 2em;
 		position: relative;
 		top: 0.5em;
 	}
 
 	sup {
-		font-size: 0.8em;
+		font-size: 2em;
 		position: relative;
 		top: -0.5em;
 	}
@@ -296,7 +296,7 @@
 		background: #34363b;
 		border: solid 1px #36383c;
 		font-family: "Courier New", monospace;
-		font-size: 0.9em;
+		font-size: 2;
 		margin: 0 0.25em;
 		padding: 0.25em 0.65em;
 	}
@@ -304,7 +304,7 @@
 	pre {
 		-webkit-overflow-scrolling: touch;
 		font-family: "Courier New", monospace;
-		font-size: 0.9em;
+		font-size: 2em;
 		margin: 0 0 2em 0;
 	}
 
@@ -359,7 +359,7 @@
 		color: #ffffff !important;
 		cursor: pointer;
 		display: inline-block;
-		font-size: 0.9em;
+		font-size: 2em;
 		font-weight: 300;
 		height: 3.05556em;
 		letter-spacing: 0.1em;
@@ -420,7 +420,7 @@
 		input[type="button"].small,
 		button.small,
 		.button.small {
-			font-size: 0.8em;
+			font-size: 2em;
 		}
 
 		input[type="submit"].big,
@@ -428,7 +428,7 @@
 		input[type="button"].big,
 		button.big,
 		.button.big {
-			font-size: 1.35em;
+			font-size: 2em;
 		}
 
 		input[type="submit"].special,
@@ -514,7 +514,7 @@
 	label {
 		color: #ffffff;
 		display: block;
-		font-size: 0.9em;
+		font-size: 2em;
 		font-weight: 300;
 		margin: 0 0 1em 0;
 	}
@@ -631,7 +631,7 @@
 			color: #a0a0a1;
 			cursor: pointer;
 			display: inline-block;
-			font-size: 1em;
+			font-size: 2em;
 			font-weight: 300;
 			padding-left: 2.4em;
 			padding-right: 0.75em;
@@ -782,7 +782,7 @@
 				}
 
 					ul.icons li .icon:before {
-						font-size: 1.5em;
+						font-size: 2em;
 					}
 
 		ul.actions {
@@ -930,7 +930,7 @@
 
 		table th {
 			color: #ffffff;
-			font-size: 0.9em;
+			font-size: 2em;
 			font-weight: 300;
 			padding: 0 0.75em 0.75em 0.75em;
 			text-align: left;
@@ -1418,7 +1418,7 @@
 		#header h1 {
 			color: #a0a0a1;
 			display: inline-block;
-			font-size: 1em;
+			font-size: 2em;
 			line-height: 1;
 			margin: 0;
 			vertical-align: middle;
@@ -1502,11 +1502,11 @@
 			}
 
 			#header h1 {
-				font-size: 0.9em;
+				font-size: 2em;
 			}
 
 			#header nav > ul > li a {
-				font-size: 0.9em;
+				font-size: 2em;
 				padding: 0 1.15em;
 			}
 
@@ -1583,7 +1583,7 @@
 				-ms-pointer-events: none;
 				pointer-events: none;
 				bottom: 1.875em;
-				font-size: 0.8em;
+				font-size: 2em;
 				left: 2.1875em;
 				margin: 0;
 				position: absolute;
@@ -1987,7 +1987,7 @@
 
 	#footer .copyright {
 		color: #505051;
-		font-size: 0.9em;
+		font-size: 2em;
 	}
 
 		#footer .copyright a {
