@@ -20,7 +20,18 @@ layout: default
         {% for image in site.static_files %}
         {% if image.path contains 'fulls' %}
         <article class="thumb">
-            <a href="{{ site.baseurl }}{{ site.image_fulls_loc }}/{{ image.name }}" class="image">
+            {% assign title = false %}
+            {%- for tfile in site.static_files reversed -%}
+                {%- if tfile.path contains 'texts' -%}
+                    {%- if tfile.path contains image.basename -%}
+                        {%- assign title = true -%}
+                            <a href="{{ site.baseurl }}{{ site.image_fulls_loc }}/{{ image.name }}" id="image" class="swipebox" title="{% include_relative /images/texts/{{ tfile.name }} %}">
+                        {%- endif -%}
+                {%- endif -%}
+            {%- endfor -%}
+            {%- if title != true -%}
+                <a href="{{ site.baseurl }}{{ site.image_fulls_loc }}/{{ image.name }}" id="image" class="swipebox" title="{{ image.name }}">
+            {%- endif -%}
                 <img src="{{ site.baseurl }}{{ site.image_thumbs_loc }}/{{ image.name }}" alt=""
                      data-name="{{ image.name }}"/></a>
             <!--<h2></h2>
